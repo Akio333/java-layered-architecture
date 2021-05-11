@@ -1,0 +1,73 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>LayedArch</groupId>
+  <artifactId>layerdarch</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>LayeredArch</name>
+  <description>lll</description>
+  
+  <properties>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <junit.jupiter.engine_version>5.6.3</junit.jupiter.engine_version>
+    <junit.platform.runner_version>1.6.3</junit.platform.runner_version>
+    <junit.jupiter.params_version>5.6.3</junit.jupiter.params_version>
+    <mockito.core_version>3.2.4</mockito.core_version>
+    <log4j.version>1.2.17</log4j.version>
+  </properties>
+  
+  <dependencies>
+ 	<dependency>
+    	<groupId>org.junit.jupiter</groupId>
+    	<artifactId>junit-jupiter-engine</artifactId>
+    	<version>${junit.jupiter.engine_version}</version>
+    	<scope>test</scope>
+	</dependency>
+	<dependency>
+    	<groupId>org.junit.platform</groupId>
+    	<artifactId>junit-platform-runner</artifactId>
+    	<version>${junit.platform.runner_version}</version>
+    	<scope>test</scope>
+	</dependency>
+	<dependency>
+   	 	<groupId>org.junit.jupiter</groupId>
+    	<artifactId>junit-jupiter-params</artifactId>
+    	<version>${junit.jupiter.params_version}</version>
+    	<scope>test</scope>
+	</dependency>
+	<dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-core</artifactId>
+        <version>${mockito.core_version}</version>
+        <scope>test</scope>
+        </dependency>
+	<dependency>
+   	 <groupId>log4j</groupId>
+    	<artifactId>log4j</artifactId>
+    	<version>${log4j.version}</version>
+	</dependency>	
+  </dependencies>
+  
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.0.0-M5</version>
+        </plugin>
+        <plugin>
+        	<groupId>org.apache.maven.plugins</groupId>
+        	<artifactId>maven-jar-plugin</artifactId>
+        	<version>3.2.0</version>
+        	<configuration>
+          		<archive>
+            		<manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
+         	 	</archive>
+        	</configuration>
+      	</plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+</project>
